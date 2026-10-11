@@ -43,6 +43,16 @@
           },
           "blocks": {}
         },
+        "hero_cta_7JQzx9": {
+          "type": "hero-cta",
+          "name": "Hero CTA Button",
+          "settings": {
+            "button_text": "GET THE VARIETY PACK",
+            "button_url": "",
+            "badge_text": "SAVE 20%"
+          },
+          "blocks": {}
+        },
         "hero_usp_BVcJRc": {
           "type": "hero-usp",
           "name": "Hero USP Bar",
@@ -61,10 +71,12 @@
       },
       "block_order": [
         "hero_icon_feature_7PggRM",
+        "hero_cta_7JQzx9",
         "hero_usp_BVcJRc"
       ],
       "name": "Hero Banner",
       "settings": {
+        "background_image": "shopify://shop_images/Hero_Desktop.jpg",
         "title": "5 Reasons Why Thousands Are Swapping Their Afternoon Snack for a Bar Made for the Brain",
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
