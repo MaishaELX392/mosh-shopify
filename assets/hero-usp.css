@@ -1,0 +1,101 @@
+.hero-usp {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.hero-usp__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #6b21a8;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* Vertical Dividers */
+.hero-usp__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  width: 1px;
+  background-color: #9333ea;
+  opacity: 0.4;
+}
+
+/* Star rating container and images */
+.hero-usp__item--reviews {
+  align-items: center;
+  text-align: center;
+}
+
+.hero-usp__rating-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.hero-usp__rating-image {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Text alignment & line wrappers */
+.hero-usp__item--founders,
+.hero-usp__item--guarantee {
+  align-items: center;
+  text-align: center;
+}
+
+.hero-usp__text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.hero-usp__line-1,
+.hero-usp__line-2 {
+  display: flex;
+}
+
+/* Font styles */
+.hero-usp__bold {
+  font-weight: 700;
+  color: #581c87;
+}
+
+.hero-usp__muted {
+  font-weight: 400;
+  color: #6b21a8;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 640px) {
+  .hero-usp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-usp__item {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-usp__item:not(:last-child)::after {
+    display: none;
+  }
+}

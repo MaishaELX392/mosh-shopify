@@ -1,0 +1,166 @@
+{{ 'hero-usp.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-usp" {{ block.shopify_attributes }}>
+
+  {% comment %} Item 1: Reviews {% endcomment %}
+  <div class="hero-usp__item hero-usp__item--reviews">
+    <div class="hero-usp__rating-image-wrapper">
+      <img
+        src="{{ 'Star_Rating.svg' | asset_url }}"
+        alt="Star Rating"
+        class="hero-usp__rating-image"
+        width="auto"
+        height="16"
+        loading="lazy"
+      >
+      <img
+        src="{{ 'Star_Rating.svg' | asset_url }}"
+        alt="Star Rating"
+        class="hero-usp__rating-image"
+        width="auto"
+        height="16"
+        loading="lazy"
+      >
+      <img
+        src="{{ 'Star_Rating.svg' | asset_url }}"
+        alt="Star Rating"
+        class="hero-usp__rating-image"
+        width="auto"
+        height="16"
+        loading="lazy"
+      >
+      <img
+        src="{{ 'Star_Rating.svg' | asset_url }}"
+        alt="Star Rating"
+        class="hero-usp__rating-image"
+        width="auto"
+        height="16"
+        loading="lazy"
+      >
+      <img
+        src="{{ 'Star_Rating.svg' | asset_url }}"
+        alt="Star Rating"
+        class="hero-usp__rating-image"
+        width="auto"
+        height="16"
+        loading="lazy"
+      >
+    </div>
+    <div class="hero-usp__text">
+      {% if block.settings.rating_text != blank %}
+        <span class="hero-usp__bold">{{ block.settings.rating_text }}</span>
+      {% endif %}
+      {% if block.settings.reviews_count != blank %}
+        <span class="hero-usp__muted">{{ block.settings.reviews_count }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} Item 2: Founders {% endcomment %}
+  <div class="hero-usp__item hero-usp__item--founders">
+    <div class="hero-usp__text hero-usp__line-1">
+      {% if block.settings.founders_prefix != blank %}
+        <span class="hero-usp__muted">{{ block.settings.founders_prefix }}</span>
+      {% endif %}
+      {% if block.settings.founder_name_1 != blank %}
+        <span class="hero-usp__bold">{{ block.settings.founder_name_1 }}</span>
+      {% endif %}
+    </div>
+    {% if block.settings.founder_name_2 != blank %}
+      <div class="hero-usp__text hero-usp__line-2">
+        <span class="hero-usp__bold">{{ block.settings.founder_name_2 }}</span>
+      </div>
+    {% endif %}
+  </div>
+
+  {% comment %} Item 3: Guarantee {% endcomment %}
+  <div class="hero-usp__item hero-usp__item--guarantee">
+    <div class="hero-usp__text hero-usp__line-1">
+      {% if block.settings.guarantee_prefix != blank %}
+        <span class="hero-usp__muted">{{ block.settings.guarantee_prefix }}</span>
+      {% endif %}
+      {% if block.settings.guarantee_title != blank %}
+        <span class="hero-usp__bold">{{ block.settings.guarantee_title }}</span>
+      {% endif %}
+    </div>
+    {% if block.settings.guarantee_subtitle != blank %}
+      <div class="hero-usp__text hero-usp__line-2">
+        <span class="hero-usp__bold">{{ block.settings.guarantee_subtitle }}</span>
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Hero USP Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Item 1: Reviews"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating Text",
+      "default": "4.9 stars,"
+    },
+    {
+      "type": "text",
+      "id": "reviews_count",
+      "label": "Reviews Count",
+      "default": "11,000+ reviews"
+    },
+    {
+      "type": "header",
+      "content": "Item 2: Founders"
+    },
+    {
+      "type": "text",
+      "id": "founders_prefix",
+      "label": "Prefix Text",
+      "default": "Founded by"
+    },
+    {
+      "type": "text",
+      "id": "founder_name_1",
+      "label": "Founder 1",
+      "default": "Maria Shriver"
+    },
+    {
+      "type": "text",
+      "id": "founder_name_2",
+      "label": "Founder 2",
+      "default": "& Patrick Schwarzenegger"
+    },
+    {
+      "type": "header",
+      "content": "Item 3: Guarantee"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_prefix",
+      "label": "Prefix Text",
+      "default": "30-Day"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_title",
+      "label": "Main Title",
+      "default": "Happiness"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_subtitle",
+      "label": "Subtitle",
+      "default": "Guarantee"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero USP Bar"
+    }
+  ]
+}
+{% endschema %}

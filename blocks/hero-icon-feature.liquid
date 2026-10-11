@@ -1,0 +1,190 @@
+{{ 'hero-icon-feature.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-icon-feature" {{ block.shopify_attributes }}>
+  
+  {% comment %} Icon Item 1 {% endcomment %}
+  <div class="hero-icon-feature__item">
+    {% if block.settings.icon_1 != blank %}
+      {{
+        block.settings.icon_1
+        | image_url: width: 100
+        | image_tag:
+          class: 'hero-icon-feature__icon',
+          alt: block.settings.title_1,
+          loading: 'lazy'
+      }}
+    {% endif %}
+    <div class="hero-icon-feature__text">
+      {% if block.settings.title_1 != blank %}
+        <span class="hero-icon-feature__title">{{ block.settings.title_1 }}</span>
+      {% endif %}
+      {% if block.settings.subtitle_1 != blank %}
+        <span class="hero-icon-feature__subtitle">{{ block.settings.subtitle_1 }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} Icon Item 2 {% endcomment %}
+  <div class="hero-icon-feature__item">
+    {% if block.settings.icon_2 != blank %}
+      {{
+        block.settings.icon_2
+        | image_url: width: 100
+        | image_tag:
+          class: 'hero-icon-feature__icon',
+          alt: block.settings.title_2,
+          loading: 'lazy'
+      }}
+    {% endif %}
+    <div class="hero-icon-feature__text">
+      {% if block.settings.title_2 != blank %}
+        <span class="hero-icon-feature__title">{{ block.settings.title_2 }}</span>
+      {% endif %}
+      {% if block.settings.subtitle_2 != blank %}
+        <span class="hero-icon-feature__subtitle">{{ block.settings.subtitle_2 }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} Icon Item 3 {% endcomment %}
+  <div class="hero-icon-feature__item">
+    {% if block.settings.icon_3 != blank %}
+      {{
+        block.settings.icon_3
+        | image_url: width: 100
+        | image_tag:
+          class: 'hero-icon-feature__icon',
+          alt: block.settings.title_3,
+          loading: 'lazy'
+      }}
+    {% endif %}
+    <div class="hero-icon-feature__text">
+      {% if block.settings.title_3 != blank %}
+        <span class="hero-icon-feature__title">{{ block.settings.title_3 }}</span>
+      {% endif %}
+      {% if block.settings.subtitle_3 != blank %}
+        <span class="hero-icon-feature__subtitle">{{ block.settings.subtitle_3 }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} Icon Item 4 {% endcomment %}
+  <div class="hero-icon-feature__item">
+    {% if block.settings.icon_4 != blank %}
+      {{
+        block.settings.icon_4
+        | image_url: width: 100
+        | image_tag:
+          class: 'hero-icon-feature__icon',
+          alt: block.settings.title_4,
+          loading: 'lazy'
+      }}
+    {% endif %}
+    <div class="hero-icon-feature__text">
+      {% if block.settings.title_4 != blank %}
+        <span class="hero-icon-feature__title">{{ block.settings.title_4 }}</span>
+      {% endif %}
+      {% if block.settings.subtitle_4 != blank %}
+        <span class="hero-icon-feature__subtitle">{{ block.settings.subtitle_4 }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Hero Icon Feature Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Icon 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title 1 Line 1",
+      "default": "12-13G"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_1",
+      "label": "Title 1 Line 2",
+      "default": "PROTEIN"
+    },
+    {
+      "type": "header",
+      "content": "Icon 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title 2 Line 1",
+      "default": "4G SUGAR"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_2",
+      "label": "Title 2 Line 2",
+      "default": "OR LESS"
+    },
+    {
+      "type": "header",
+      "content": "Icon 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title 3 Line 1",
+      "default": "160-180"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_3",
+      "label": "Title 3 Line 2",
+      "default": "CALORIES"
+    },
+    {
+      "type": "header",
+      "content": "Icon 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title 4 Line 1",
+      "default": "6+ BRAIN"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_4",
+      "label": "Title 4 Line 2",
+      "default": "INGREDIENTS"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Icon Feature Bar"
+    }
+  ]
+}
+{% endschema %}

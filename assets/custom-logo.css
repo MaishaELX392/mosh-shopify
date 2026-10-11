@@ -1,0 +1,38 @@
+.custom-logo {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  
+  background-color: #FDF7FF; 
+}
+
+.custom-logo__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-logo__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.custom-logo__image {
+  display: block;
+  width: auto;
+  max-width: 105px;
+  height: auto;
+}
+
+.custom-logo__text {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+}

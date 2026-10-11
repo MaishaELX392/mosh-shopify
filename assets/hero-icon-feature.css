@@ -1,0 +1,52 @@
+.hero-icon-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.hero-icon-feature__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90px;
+}
+
+.hero-icon-feature__icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.hero-icon-feature__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-icon-feature__title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #5b21b6;
+  line-height: 1.2;
+}
+
+.hero-icon-feature__subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b21b6;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .hero-icon-feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .hero-icon-feature__item {
+    width: 100%;
+  }
+}

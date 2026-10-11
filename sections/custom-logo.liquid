@@ -1,0 +1,37 @@
+{{ 'custom-logo.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-logo">
+  <div class="custom-logo__container">
+    <a href="{{ routes.root_url }}" class="custom-logo__link">
+      {% if section.settings.logo != blank %}
+        {{
+          section.settings.logo
+          | image_url: width: 400
+          | image_tag:
+            class: 'custom-logo__image',
+            alt: section.settings.logo.alt | default: shop.name
+        }}
+      {% else %}
+        <span class="custom-logo__text">{{ shop.name }}</span>
+      {% endif %}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Logo",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Logo"
+    }
+  ]
+}
+{% endschema %}
