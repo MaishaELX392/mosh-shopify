@@ -47,9 +47,11 @@
           "type": "hero-cta",
           "name": "Hero CTA Button",
           "settings": {
+            "button_bg": "linear-gradient(103.96deg, rgba(96, 34, 166, 1), rgba(135, 24, 157, 1) 100%)",
             "button_text": "GET THE VARIETY PACK",
             "button_url": "",
-            "badge_text": "SAVE 20%"
+            "badge_text": "SAVE 20%",
+            "badge_bg": "#ffffff"
           },
           "blocks": {}
         },
