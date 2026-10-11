@@ -1,0 +1,33 @@
+.hero-banner__cta-wrapper {
+  margin-bottom: 8px;
+}
+
+.hero-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5b21b6;
+  color: #ffffff;
+  padding: 8px 10px 8px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  gap: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner__btn:hover {
+  background-color: #4c1d95;
+}
+
+.hero-banner__btn-badge {
+  background-color: #ffffff;
+  color: #5b21b6;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+}
+ 
