@@ -11,10 +11,68 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "custom_logo_y8WHty": {
+      "type": "custom-logo",
+      "name": "Custom Logo",
+      "settings": {
+        "logo": "shopify://shop_images/Logo.svg"
+      }
+    },
+    "hero_banner_gnKjeK": {
+      "type": "hero-banner",
+      "blocks": {
+        "hero_icon_feature_7PggRM": {
+          "type": "hero-icon-feature",
+          "name": "Hero Icon Feature Bar",
+          "settings": {
+            "icon_1": "shopify://shop_images/icon_protein.svg",
+            "title_1": "12-13G",
+            "subtitle_1": "PROTEIN",
+            "icon_2": "shopify://shop_images/icon_Sugar.svg",
+            "title_2": "4G SUGAR",
+            "subtitle_2": "OR LESS",
+            "icon_3": "shopify://shop_images/icon_Calories.svg",
+            "title_3": "160-180",
+            "subtitle_3": "CALORIES",
+            "icon_4": "shopify://shop_images/icon_brain_ed60249b-59fc-40bf-b090-cbf98c5ef6a4.svg",
+            "title_4": "6+ BRAIN",
+            "subtitle_4": "INGREDIENTS"
+          },
+          "blocks": {}
+        },
+        "hero_usp_BVcJRc": {
+          "type": "hero-usp",
+          "name": "Hero USP Bar",
+          "settings": {
+            "rating_text": "4.9 stars,",
+            "reviews_count": "11,000+ reviews",
+            "founders_prefix": "Founded by",
+            "founder_name_1": "Maria Shriver",
+            "founder_name_2": "& Patrick Schwarzenegger",
+            "guarantee_prefix": "30-Day",
+            "guarantee_title": "Happiness",
+            "guarantee_subtitle": "Guarantee"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hero_icon_feature_7PggRM",
+        "hero_usp_BVcJRc"
+      ],
+      "name": "Hero Banner",
+      "settings": {
+        "title": "5 Reasons Why Thousands Are Swapping Their Afternoon Snack for a Bar Made for the Brain",
+        "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_logo_y8WHty",
+    "hero_banner_gnKjeK"
   ]
 }
