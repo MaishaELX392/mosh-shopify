@@ -43,7 +43,7 @@
           },
           "blocks": {}
         },
-        "hero_cta_7JQzx9": {
+        "hero_cta_tcVAzm": {
           "type": "hero-cta",
           "name": "Hero CTA Button",
           "settings": {
@@ -71,7 +71,7 @@
       },
       "block_order": [
         "hero_icon_feature_7PggRM",
-        "hero_cta_7JQzx9",
+        "hero_cta_tcVAzm",
         "hero_usp_BVcJRc"
       ],
       "name": "Hero Banner",
