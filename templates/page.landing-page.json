@@ -82,11 +82,84 @@
         "title": "5 Reasons Why Thousands Are Swapping Their Afternoon Snack for a Bar Made for the Brain",
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
+    },
+    "customer_reviews_G6ywkp": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_9djj9H": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Great nutrition bar, tasty and reasonable calorie count. Half a bar is enough for a snack!",
+            "author_name": "Gloria"
+          }
+        },
+        "review_HkCjwA": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "I wasn't sure if I'd like the texture or if I'd like the taste but all the ingredients seemed good so I decided to take a chance.",
+            "author_name": "Name"
+          }
+        },
+        "review_WrQNPR": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Every type of protein or energy bar that is \"health food\" oriented you can find. Nothing has been as satisfying, beneficial or tasty as Mosh.",
+            "author_name": "Name"
+          }
+        },
+        "review_yXft6m": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Great bar. It is more expensive than other bars but if it a meal substitute I think it is a good choice. Low sugar.",
+            "author_name": "Name"
+          }
+        },
+        "review_NNgpMR": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Viewed your ad on Facebook. I've always admired Maria and wanted to contribute to the cause. I love the product. It is now my go-to bar every day.",
+            "author_name": "Name"
+          }
+        },
+        "review_kpnNNU": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "I'm a 72 year old who doesn't feel 72 and wants to stay as healthy as I can!",
+            "author_name": "Name"
+          }
+        }
+      },
+      "block_order": [
+        "review_9djj9H",
+        "review_HkCjwA",
+        "review_WrQNPR",
+        "review_yXft6m",
+        "review_NNgpMR",
+        "review_kpnNNU"
+      ],
+      "name": "Customer Reviews Grid",
+      "settings": {
+        "heading": "What Customers Say After The First Box",
+        "section_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)"
+      }
     }
   },
   "order": [
     "main",
     "custom_logo_y8WHty",
-    "hero_banner_gnKjeK"
+    "hero_banner_gnKjeK",
+    "customer_reviews_G6ywkp"
   ]
 }
