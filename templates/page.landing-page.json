@@ -47,7 +47,7 @@
           "type": "hero-cta",
           "name": "Hero CTA Button",
           "settings": {
-            "button_bg": "linear-gradient(103.96deg, rgba(96, 34, 166, 1), rgba(135, 24, 157, 1) 100%)",
+            "button_bg": "linear-gradient(103.96deg, #6022A6 0%, #87189D 100%)",
             "button_text": "GET THE VARIETY PACK",
             "button_url": "",
             "badge_text": "SAVE 20%",
@@ -152,7 +152,7 @@
       "name": "Customer Reviews Grid",
       "settings": {
         "heading": "What Customers Say After The First Box",
-        "section_bg": ""
+        "section_bg": "linear-gradient(0deg, #FBEAFE, #FBEAFE),\nlinear-gradient(0deg, #FDF7FF, #FDF7FF)"
       }
     }
   },
