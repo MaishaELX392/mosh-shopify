@@ -152,7 +152,7 @@
       "name": "Customer Reviews Grid",
       "settings": {
         "heading": "What Customers Say After The First Box",
-        "section_bg": "linear-gradient(0deg, rgba(251, 234, 254, 0.5), rgba(253, 247, 255, 1) 100%)"
+        "section_bg": ""
       }
     }
   },
