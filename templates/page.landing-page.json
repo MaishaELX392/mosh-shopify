@@ -172,7 +172,7 @@
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
             "text_color": "#4b5563",
-            "quote_bg": "#F3E8FF",
+            "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
           "blocks": {}
@@ -181,7 +181,9 @@
           "type": "right-image-block",
           "name": "Right Image Block",
           "settings": {
-            "badge_text": "00",
+            "image": "shopify://shop_images/Listicle_Img_02.png",
+            "badge_text": "02",
+            "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
             "description": "<p>Sweets hit fast and leave you hungry an hour later. MOSH has <strong>12-13g of protein plus fiber.</strong></p>",
             "quote_text": "It is a very satisfying mid-afternoon snack. I value the protein.",
@@ -189,7 +191,7 @@
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
             "text_color": "#4b5563",
-            "quote_bg": "#F3E8FF",
+            "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
           "blocks": {}
@@ -198,7 +200,9 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "badge_text": "00",
+            "image": "shopify://shop_images/Listicle_Img_03.png",
+            "badge_text": "03",
+            "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
             "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
             "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
@@ -206,7 +210,7 @@
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
             "text_color": "#4b5563",
-            "quote_bg": "#F3E8FF",
+            "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
           "blocks": {}
@@ -215,7 +219,9 @@
           "type": "right-image-block",
           "name": "Right Image Block",
           "settings": {
-            "badge_text": "00",
+            "image": "shopify://shop_images/Listicle_Img_04.png",
+            "badge_text": "04",
+            "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
             "description": "<p>Sweets hit fast and leave you hungry an hour later. MOSH has <strong>12-13g of protein plus fiber.</strong></p>",
             "quote_text": "It is a very satisfying mid-afternoon snack. I value the protein.",
@@ -223,7 +229,7 @@
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
             "text_color": "#4b5563",
-            "quote_bg": "#F3E8FF",
+            "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
           "blocks": {}
@@ -232,7 +238,9 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "badge_text": "00",
+            "image": "shopify://shop_images/Listicle_Img_05.png",
+            "badge_text": "05",
+            "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
             "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
             "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
@@ -240,7 +248,7 @@
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
             "text_color": "#4b5563",
-            "quote_bg": "#F3E8FF",
+            "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
           "blocks": {}
