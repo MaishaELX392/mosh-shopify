@@ -162,7 +162,9 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "badge_text": "00",
+            "image": "shopify://shop_images/Listicle_Img_01.png",
+            "badge_text": "01",
+            "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
             "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
             "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
