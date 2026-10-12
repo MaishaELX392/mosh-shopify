@@ -1,0 +1,3 @@
+.feature-row--right-image .feature-row__wrapper {
+  flex-direction: row-reverse;
+}

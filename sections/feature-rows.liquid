@@ -1,0 +1,24 @@
+{{ 'feature-rows.css' | asset_url | stylesheet_tag }}
+
+<section class="feature-rows full-width">
+  <div class="feature-rows__container">
+    {% content_for 'blocks' %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Feature Rows (Stacked)",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Rows (Stacked)"
+    }
+  ]
+}
+{% endschema %}

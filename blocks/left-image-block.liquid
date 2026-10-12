@@ -1,0 +1,161 @@
+{{ 'block-left-image.css' | asset_url | stylesheet_tag }}
+
+<div 
+  class="feature-row feature-row--left-image" 
+  style="background: {{ block.settings.row_bg }};"
+  {{ block.shopify_attributes }}
+>
+  <div class="feature-row__wrapper">
+    <!-- Image Side (Left) -->
+    <div class="feature-row__media">
+      {%- if block.settings.image != blank -%}
+        <img
+          src="{{ block.settings.image | image_url: width: 1400 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          class="feature-row__image"
+          loading="lazy"
+          width="auto"
+          height="auto"
+        >
+      {%- else -%}
+        <div class="feature-row__placeholder">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Content Side (Right) -->
+    <div class="feature-row__content">
+      {%- if block.settings.badge_text != blank -%}
+        {%- liquid
+          assign badge_style = "color: " | append: block.settings.badge_color | append: ";"
+          if block.settings.badge_bg_image != blank
+            assign badge_bg_url = block.settings.badge_bg_image | image_url: width: 300
+            assign badge_style = badge_style | append: " background-image: url('" | append: badge_bg_url | append: "'); background-size: cover; background-position: center;"
+          else
+            assign badge_style = badge_style | append: " background-color: #5b21b6;"
+          endif
+        -%}
+        <div class="feature-row__badge" style="{{ badge_style }}">
+          <span>{{ block.settings.badge_text }}</span>
+        </div>
+      {%- endif -%}
+
+      {%- if block.settings.heading != blank -%}
+        <h2 class="feature-row__heading" style="color: {{ block.settings.heading_color }};">
+          {{ block.settings.heading }}
+        </h2>
+      {%- endif -%}
+
+      {%- if block.settings.description != blank -%}
+        <div class="feature-row__description" style="color: {{ block.settings.text_color }};">
+          {{ block.settings.description }}
+        </div>
+      {%- endif -%}
+
+      {%- if block.settings.quote_text != blank -%}
+        <div 
+          class="feature-row__quote" 
+          style="background: {{ block.settings.quote_bg }}; color: {{ block.settings.quote_color }};"
+        >
+          <p>“{{ block.settings.quote_text }}”</p>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Left Image Block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Feature Image"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Number Text",
+      "default": "00"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_bg_image",
+      "label": "Badge Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Made for Your Brain, by People With a Mission"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>"
+    },
+    {
+      "type": "textarea",
+      "id": "quote_text",
+      "label": "Quote Text",
+      "default": "Good tasting healthy protein bars with a boost for your brain!"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_background",
+      "id": "row_bg",
+      "label": "Row Background",
+      "default": "linear-gradient(0deg, #FDF7FF, #FDF7FF)"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#5b21b6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4b5563"
+    },
+    {
+      "type": "color",
+      "id": "quote_bg",
+      "label": "Quote Box Background",
+      "default": "#F3E8FF"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Quote Text Color",
+      "default": "#5b21b6"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Left Image Block"
+    }
+  ]
+}
+{% endschema %}
