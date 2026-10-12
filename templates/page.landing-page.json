@@ -154,12 +154,112 @@
         "heading": "What Customers Say After The First Box",
         "section_bg": "linear-gradient(0deg, #FBEAFE, #FBEAFE),\nlinear-gradient(0deg, #FDF7FF, #FDF7FF)"
       }
+    },
+    "feature_rows_YJffLP": {
+      "type": "feature-rows",
+      "blocks": {
+        "left_image_block_enagat": {
+          "type": "left-image-block",
+          "name": "Left Image Block",
+          "settings": {
+            "badge_text": "00",
+            "heading": "Made for Your Brain, by People With a Mission",
+            "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
+            "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
+            "row_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "badge_color": "#ffffff",
+            "heading_color": "#5b21b6",
+            "text_color": "#4b5563",
+            "quote_bg": "#F3E8FF",
+            "quote_color": "#5b21b6"
+          },
+          "blocks": {}
+        },
+        "right_image_block_pntN6d": {
+          "type": "right-image-block",
+          "name": "Right Image Block",
+          "settings": {
+            "badge_text": "00",
+            "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
+            "description": "<p>Sweets hit fast and leave you hungry an hour later. MOSH has <strong>12-13g of protein plus fiber.</strong></p>",
+            "quote_text": "It is a very satisfying mid-afternoon snack. I value the protein.",
+            "row_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "badge_color": "#ffffff",
+            "heading_color": "#5b21b6",
+            "text_color": "#4b5563",
+            "quote_bg": "#F3E8FF",
+            "quote_color": "#5b21b6"
+          },
+          "blocks": {}
+        },
+        "left_image_block_cK3fmf": {
+          "type": "left-image-block",
+          "name": "Left Image Block",
+          "settings": {
+            "badge_text": "00",
+            "heading": "Made for Your Brain, by People With a Mission",
+            "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
+            "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
+            "row_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "badge_color": "#ffffff",
+            "heading_color": "#5b21b6",
+            "text_color": "#4b5563",
+            "quote_bg": "#F3E8FF",
+            "quote_color": "#5b21b6"
+          },
+          "blocks": {}
+        },
+        "right_image_block_myDwME": {
+          "type": "right-image-block",
+          "name": "Right Image Block",
+          "settings": {
+            "badge_text": "00",
+            "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
+            "description": "<p>Sweets hit fast and leave you hungry an hour later. MOSH has <strong>12-13g of protein plus fiber.</strong></p>",
+            "quote_text": "It is a very satisfying mid-afternoon snack. I value the protein.",
+            "row_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "badge_color": "#ffffff",
+            "heading_color": "#5b21b6",
+            "text_color": "#4b5563",
+            "quote_bg": "#F3E8FF",
+            "quote_color": "#5b21b6"
+          },
+          "blocks": {}
+        },
+        "left_image_block_kE8UJN": {
+          "type": "left-image-block",
+          "name": "Left Image Block",
+          "settings": {
+            "badge_text": "00",
+            "heading": "Made for Your Brain, by People With a Mission",
+            "description": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>",
+            "quote_text": "Good tasting healthy protein bars with a boost for your brain!",
+            "row_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "badge_color": "#ffffff",
+            "heading_color": "#5b21b6",
+            "text_color": "#4b5563",
+            "quote_bg": "#F3E8FF",
+            "quote_color": "#5b21b6"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "left_image_block_enagat",
+        "right_image_block_pntN6d",
+        "left_image_block_cK3fmf",
+        "right_image_block_myDwME",
+        "left_image_block_kE8UJN"
+      ],
+      "name": "Feature Rows (Stacked)",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "custom_logo_y8WHty",
     "hero_banner_gnKjeK",
-    "customer_reviews_G6ywkp"
+    "customer_reviews_G6ywkp",
+    "feature_rows_YJffLP"
   ]
 }
