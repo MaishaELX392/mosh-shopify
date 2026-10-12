@@ -20,7 +20,6 @@
   font-weight: 800;
   color: #5b21b6;
   margin-bottom: 48px;
-  letter-spacing: -0.5px;
 }
 
 .customer-reviews__grid {
@@ -37,9 +36,6 @@
   align-items: center;
   text-align: center;
   position: relative;
-  box-shadow: 0 10px 25px rgba(91, 33, 182, 0.04);
-  border-radius: 8px;
-  border: 1px solid rgba(91, 33, 182, 0.08);
 }
 
 .customer-reviews__stars {
@@ -61,7 +57,7 @@
 
 .customer-reviews__text {
   font-size: 15px;
-  line-height: 1.55;
+
   color: #5b21b6;
   font-weight: 500;
   margin-bottom: 24px;
@@ -74,7 +70,6 @@
   margin-top: auto;
 }
 
-/* Responsive layout adjustments */
 @media (max-width: 1024px) {
   .customer-reviews__grid {
     grid-template-columns: repeat(2, 1fr);
