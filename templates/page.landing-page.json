@@ -171,7 +171,7 @@
             "row_bg": "#FDF7FF",
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
-            "text_color": "#5B21B6",
+            "text_color": "#5b21b6",
             "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
@@ -190,7 +190,7 @@
             "row_bg": "#FDF7FF",
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
-            "text_color": "#5B21B6",
+            "text_color": "#5b21b6",
             "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
@@ -209,7 +209,7 @@
             "row_bg": "#FDF7FF",
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
-            "text_color": "#5B21B6",
+            "text_color": "#5b21b6",
             "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
@@ -228,7 +228,7 @@
             "row_bg": "#FDF7FF",
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
-            "text_color": "#5B21B6",
+            "text_color": "#5b21b6",
             "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
@@ -247,7 +247,7 @@
             "row_bg": "#FDF7FF",
             "badge_color": "#ffffff",
             "heading_color": "#5b21b6",
-            "text_color": "#5B21B6",
+            "text_color": "#5b21b6",
             "quote_bg": "#f3e8ff",
             "quote_color": "#5b21b6"
           },
@@ -309,7 +309,7 @@
         "heading_color": "#5b21b6",
         "question_color": "#5b21b6",
         "answer_color": "#000000",
-        "border_color": "#E9D5FF"
+        "border_color": "#e9d5ff"
       }
     },
     "promo_JMmjwt": {
@@ -339,8 +339,44 @@
         "support_text": "A portion of every purchase supports women's Alzheimer's research",
         "bg_color": "#ffffff",
         "heading_color": "#5b21b6",
-        "text_color": "#6022A6",
+        "text_color": "#6022a6",
         "content_bg_color": "#ffffff"
+      }
+    },
+    "variety_pack_offer_x7y8jK": {
+      "type": "variety-pack-offer",
+      "blocks": {
+        "hero_cta_y6gJDE": {
+          "type": "hero_cta",
+          "settings": {
+            "button_bg": "linear-gradient(91.2deg, #FFB800 30.88%, #FFD465 67.48%)",
+            "button_text": "GET THE VARIETY PACK",
+            "badge_text": "SAVE 20%",
+            "badge_bg": "linear-gradient(103.96deg, #9C33F6 0%, #B84DFF 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "hero_cta_y6gJDE"
+      ],
+      "name": "Variety Pack Offer",
+      "settings": {
+        "subscription_plans": [
+          "one-time-purchase",
+          "subscribe-save"
+        ],
+        "subheading": "Your New Go-To Snack:",
+        "heading": "15 Bars, 6 Flavors, 20% Off",
+        "description": "<p>A few in your purse, a few in the car, the rest by the coffee maker. First orders also get a free Best Sellers 6-Pack. That's 21 bars for $43.99. About $2 a bar, less than a coffee shop muffin.</p>",
+        "footer_note": "Don't love it? Email us within 30 days and we'll make it right or refund you. No fine print.",
+        "main_image": "shopify://shop_images/Buy_Box_Image_Desktop.png",
+        "section_bg": "#6022A6",
+        "card_bg": "#9A7FB9",
+        "heading_color": "#FFFFFF",
+        "text_color": "#E2D3FC",
+        "card_border_color": "rgba(255, 255, 255, 0.3)",
+        "card_selected_border_color": "#FFFFFF",
+        "card_selected_bg": "rgba(255, 255, 255, 0.08)"
       }
     }
   },
@@ -351,6 +387,7 @@
     "customer_reviews_G6ywkp",
     "feature_rows_YJffLP",
     "quick_questions_RJC7Pg",
-    "promo_JMmjwt"
+    "promo_JMmjwt",
+    "variety_pack_offer_x7y8jK"
   ]
 }
