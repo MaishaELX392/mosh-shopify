@@ -318,7 +318,7 @@
         "hero_cta_H9CLtP": {
           "type": "hero-cta",
           "settings": {
-            "button_bg": "linear-gradient(103.96deg, #6022A6 0%, #87189D 100%)",
+            "button_bg": "linear-gradient(103.96deg, rgba(96, 34, 166, 1), rgba(135, 24, 157, 1) 100%)",
             "button_text": "GET THE VARIETY PACK",
             "button_url": "",
             "badge_text": "SAVE 20%",
