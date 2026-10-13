@@ -1,0 +1,373 @@
+{{ 'variety-pack-offer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'variety-pack-offer.js' | asset_url }}" defer></script>
+
+<section
+  id="VarietyPack-{{ section.id }}"
+  class="variety-offer"
+  style="
+    --vo-bg: {{ section.settings.section_bg }};
+    --vo-card-bg: {{ section.settings.card_bg }};
+    --vo-heading-color: {{ section.settings.heading_color }};
+    --vo-text-color: {{ section.settings.text_color }};
+    --vo-card-border: {{ section.settings.card_border_color }};
+    --vo-card-selected-border: {{ section.settings.card_selected_border_color }};
+    --vo-card-selected-bg: {{ section.settings.card_selected_bg }};
+  "
+>
+  <div class="variety-offer__wrapper">
+    <div class="variety-offer__container">
+
+      {%- comment -%} Media Column (Left) - Single Main Image {%- endcomment -%}
+      <div class="variety-offer__media-col">
+        <div class="variety-offer__media-card">
+          {% if section.settings.main_image != blank %}
+            {{
+              section.settings.main_image
+              | image_url: width: 1200
+              | image_tag:
+                class: 'variety-offer__main-img',
+                loading: 'lazy',
+                widths: '400, 600, 800, 1000, 1200',
+                sizes: '(min-width: 992px) 45vw, 90vw',
+                alt: section.settings.main_image.alt
+            }}
+          {% else %}
+            <div class="variety-offer__placeholder">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {%- comment -%} Content Column (Right) {%- endcomment -%}
+      <div class="variety-offer__content-col">
+
+        {% if section.settings.subheading != blank %}
+          <span class="variety-offer__subheading">
+            {{ section.settings.subheading | escape }}
+          </span>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="variety-offer__heading">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="variety-offer__description">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% assign selected_plans = section.settings.subscription_plans %}
+
+        {% if selected_plans != blank %}
+          {% assign default_plan_found = false %}
+          {% assign variety_form_id = 'VarietyPackForm-' | append: section.id %}
+
+          {% for plan in selected_plans %}
+            {% if plan.is_default.value == true %}
+              {% assign default_plan_found = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          <form method="post" action="/cart/add" id="{{ variety_form_id }}" class="variety-offer__form">
+
+            <input type="hidden" name="id" value="" data-variety-variant>
+            <input type="hidden" name="selling_plan" value="" data-variety-selling-plan>
+
+            <div class="variety-offer__options">
+
+              {% for plan in selected_plans %}
+                {% assign plan_default = false %}
+
+                {% if default_plan_found %}
+                  {% if plan.is_default.value == true %}
+                    {% assign plan_default = true %}
+                  {% endif %}
+                {% elsif forloop.first %}
+                  {% assign plan_default = true %}
+                {% endif %}
+
+                <label
+                  class="variety-offer__option-card{% if plan_default %} is-selected{% endif %}"
+                  data-variety-option
+                  data-variant-id="{{ plan.variant_id.value | escape }}"
+                  data-selling-plan="{{ plan.selling_plan_id.value | escape }}"
+                >
+                  <div class="variety-offer__option-header">
+
+                    <div class="variety-offer__radio-wrap">
+                      <input
+                        type="radio"
+                        name="purchase_option_{{ section.id }}"
+                        value="{{ plan.title.value | escape }}"
+                        class="variety-offer__radio"
+                        data-variety-radio
+                        {% if plan_default %}checked{% endif %}
+                      >
+
+                      <span class="variety-offer__option-title">
+                        {{ plan.title.value | escape }}
+                      </span>
+                    </div>
+
+                    <div class="variety-offer__price-wrap">
+
+                      {% if plan.compare_price.value != blank %}
+                        <span class="variety-offer__compare-price">
+                          {{ plan.compare_price.value | escape }}
+                        </span>
+                      {% endif %}
+
+                      {% if plan.price.value != blank %}
+                        <span class="variety-offer__price">
+                          {{ plan.price.value | escape }}
+                        </span>
+                      {% endif %}
+
+                      {% if plan.savings_badge.value != blank %}
+                        <span class="variety-offer__savings-badge">
+                          {{ plan.savings_badge.value | escape }}
+                        </span>
+                      {% endif %}
+
+                    </div>
+                  </div>
+
+                  {% assign feature_text = plan.features.value | default: '' %}
+
+                  {% if feature_text != blank %}
+                    {% assign feature_list = feature_text | newline_to_br | split: '<br />' %}
+
+                    <ul class="variety-offer__features">
+                      {% for feature in feature_list %}
+                        {% assign clean_feature = feature | strip_html | strip %}
+
+                        {% if clean_feature != blank %}
+                          <li>
+                            <svg
+                              width="12"
+                              height="10"
+                              viewBox="0 0 12 10"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M1 5L4.5 8.5L11 1.5"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+
+                            <span>{{ clean_feature | escape }}</span>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+
+                </label>
+              {% endfor %}
+
+            </div>
+
+            {%- comment -%} Render Blocks (hero_cta block) {%- endcomment -%}
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'hero_cta' %}
+                  {{ 'hero-cta.css' | asset_url | stylesheet_tag }}
+
+                  <div class="hero-banner__cta-wrapper" {{ block.shopify_attributes }}>
+                    {% if block.settings.button_text != blank %}
+                      {%- liquid
+                        assign btn_bg_style = ''
+                        if block.settings.button_bg != blank
+                          assign btn_bg_style = "background: " | append: block.settings.button_bg | append: ";"
+                        endif
+
+                        assign badge_bg_style = ''
+                        if block.settings.badge_bg != blank
+                          assign badge_bg_style = "background: " | append: block.settings.badge_bg | append: ";"
+                        endif
+                      -%}
+                      <button type="submit" class="hero-banner__btn" style="{{ btn_bg_style }}">
+                        <span class="hero-banner__btn-text">{{ block.settings.button_text }}</span>
+                        {% if block.settings.badge_text != blank %}
+                          <span class="hero-banner__btn-badge" style="{{ badge_bg_style }}">{{ block.settings.badge_text }}</span>
+                        {% endif %}
+                      </button>
+                    {% endif %}
+                  </div>
+              {% endcase %}
+            {% endfor %}
+
+            {% if section.settings.footer_note != blank %}
+              <p class="variety-offer__footer-note">
+                {{ section.settings.footer_note | escape }}
+              </p>
+            {% endif %}
+
+          </form>
+
+        {% else %}
+          <p>Please select your subscription options in section settings.</p>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Variety Pack Offer",
+  "tag": "section",
+  "class": "section-variety-pack-offer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Data Source"
+    },
+    {
+      "type": "metaobject_list",
+      "id": "subscription_plans",
+      "label": "Purchase Options",
+      "metaobject_type": "subscription_option"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Your New Go-To Snack:"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "15 Bars, 6 Flavors, 20% Off"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>A few in your purse, a few in the car, the rest by the coffee maker. First orders also get a free Best Sellers 6-Pack. That's 21 bars for $43.99. About $2 a bar, less than a coffee shop muffin.</p>"
+    },
+    {
+      "type": "text",
+      "id": "footer_note",
+      "label": "Footer Note",
+      "default": "Don't love it? Email us within 30 days and we'll make it right or refund you. No fine print."
+    },
+    {
+      "type": "header",
+      "content": "Left Media Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Showcase Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_background",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#6022A6"
+    },
+    {
+      "type": "color_background",
+      "id": "card_bg",
+      "label": "Left Media Box Background",
+      "default": "#9A7FB9"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#E2D3FC"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Option Card Border Color",
+      "default": "rgba(255, 255, 255, 0.3)"
+    },
+    {
+      "type": "color",
+      "id": "card_selected_border_color",
+      "label": "Selected Card Border Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_background",
+      "id": "card_selected_bg",
+      "label": "Selected Card Background",
+      "default": "rgba(255, 255, 255, 0.08)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero_cta",
+      "name": "Hero CTA Button",
+      "settings": [
+        {
+          "type": "color_background",
+          "id": "button_bg",
+          "label": "Button Background",
+          "default": "linear-gradient(91.2deg, #FFB800 30.88%, #FFD465 67.48%)"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "GET THE VARIETY PACK"
+        },
+        {
+          "type": "header",
+          "content": "Badge Settings"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Save Badge Text",
+          "default": "SAVE 20%"
+        },
+        {
+          "type": "color_background",
+          "id": "badge_bg",
+          "label": "Badge Background",
+          "default": "linear-gradient(103.96deg, #9C33F6 0%, #B84DFF 100%)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Variety Pack Offer",
+      "blocks": [
+        {
+          "type": "hero_cta"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
