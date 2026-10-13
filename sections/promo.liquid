@@ -1,0 +1,152 @@
+{{ 'promo.css' | asset_url | stylesheet_tag }}
+
+<section 
+  id="Promo-{{ section.id }}" 
+  class="promo"
+  style="
+    --promo-section-bg: {{ section.settings.bg_color }};
+    --promo-heading-color: {{ section.settings.heading_color }};
+    --promo-text-color: {{ section.settings.text_color }};
+    --promo-content-bg: {{ section.settings.content_bg_color | color_modify: 'alpha', 0.85 }};
+  "
+>
+  <!-- Background Image Container -->
+  <div class="promo__media-background">
+    {%- if section.settings.image != blank -%}
+      <img
+        src="{{ section.settings.image | image_url: width: 2200 }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        class="promo__image"
+        loading="lazy"
+        width="auto"
+        height="auto"
+      >
+    {%- endif -%}
+  </div>
+
+  <div class="promo__container">
+    <!-- Content Side -->
+    <div class="promo__content">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="promo__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="promo__description">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      <!-- CTA Button Block -->
+      <div class="promo__cta-wrapper">
+        {% content_for 'blocks' %}
+      </div>
+
+      <!-- Reviews & Support Footer -->
+      <div class="promo__footer">
+        <div class="promo__reviews">
+          <div class="promo__stars">
+            {%- for i in (1..5) -%}
+              <img src="{{ 'Star_Rating.svg' | asset_url }}" alt="Star" width="20" height="20">
+            {%- endfor -%}
+          </div>
+          <span class="promo__reviews-text">{{ section.settings.reviews_text }}</span>
+        </div>
+        <div class="promo__divider"></div>
+        <div class="promo__support">
+          <p class="promo__support-text">{{ section.settings.support_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Promo",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Background Image",
+      "info": "Upload a full-section feature image. If left blank, a solid background color will display."
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Swap One Snack. See What Changes"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>15 bars. 6 flavors. 4g of sugar or less. Free 6-pack with your first order, and a 30-day guarantee if you don't love them.</p>"
+    },
+    {
+      "type": "text",
+      "id": "reviews_text",
+      "label": "Reviews Subtext",
+      "default": "4.9 stars, 11,000+ reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "support_text",
+      "label": "Support Subtext",
+      "default": "A portion of every purchase supports women's Alzheimer's research"
+    },
+    {
+      "type": "header",
+      "content": "Styling & Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#5b21b6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text & Subtext Color",
+      "default": "#6022A6"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "Content Box Background (Mobile)",
+      "default": "#ffffff",
+      "info": "Applies on mobile screens when an image is present."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo",
+      "blocks": [
+        {
+          "type": "hero-cta"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

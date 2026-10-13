@@ -1,0 +1,114 @@
+.quick-questions {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  background: var(--qq-bg, #FDF7FF);
+}
+
+.quick-questions__container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-questions__heading {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 50px 0;
+  letter-spacing: -0.5px;
+  color: var(--qq-heading-color, #5b21b6);
+}
+
+.quick-questions__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-questions__item {
+  border-bottom: 1px solid var(--qq-border-color, #E9D5FF);
+  padding: 24px 0;
+  list-style: none;
+}
+
+.quick-questions__item::-webkit-details-marker {
+  display: none;
+}
+
+.quick-questions__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+}
+
+.quick-questions__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--qq-question-color, #5b21b6);
+}
+
+.quick-questions__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.quick-questions__icon img {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.quick-questions__icon .icon-expand {
+  opacity: 1;
+}
+.quick-questions__icon .icon-minimize {
+  opacity: 0;
+}
+
+/* Open state: show minimize icon, hide expand icon */
+.quick-questions__item[open] .quick-questions__icon .icon-expand {
+  opacity: 0;
+}
+.quick-questions__item[open] .quick-questions__icon .icon-minimize {
+  opacity: 1;
+}
+
+.quick-questions__content {
+  padding-top: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--qq-answer-color, #000000);
+}
+
+.quick-questions__content p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .quick-questions {
+    padding: 50px 16px;
+  }
+  .quick-questions__heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .quick-questions__title {
+    font-size: 16px;
+  }
+}

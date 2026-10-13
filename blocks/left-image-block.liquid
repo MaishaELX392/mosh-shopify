@@ -1,61 +1,80 @@
-{{ 'block-left-image.css' | asset_url | stylesheet_tag }}
+ 
+{{ 'feature-rows.css' | asset_url | stylesheet_tag }}
 
-<div 
-  class="feature-row feature-row--left-image" 
+<div
+  class="feature-row feature-row--left-image"
   style="background: {{ block.settings.row_bg }};"
   {{ block.shopify_attributes }}
 >
   <div class="feature-row__wrapper">
-    <!-- Image Side (Left) -->
     <div class="feature-row__media">
       {%- if block.settings.image != blank -%}
-        <img
-          src="{{ block.settings.image | image_url: width: 1400 }}"
-          alt="{{ block.settings.image.alt | escape }}"
-          class="feature-row__image"
-          loading="lazy"
-          width="auto"
-          height="auto"
-        >
+        {{
+          block.settings.image
+          | image_url: width: 1400
+          | image_tag:
+            class: 'feature-row__image',
+            loading: 'lazy',
+            alt: block.settings.image.alt
+        }}
       {%- else -%}
         <div class="feature-row__placeholder">
           {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
       {%- endif -%}
+
+      {%- if block.settings.floating_icon != blank -%}
+        <div class="feature-row__floating-icon">
+          {{
+            block.settings.floating_icon
+            | image_url: width: 300
+            | image_tag:
+              loading: 'lazy',
+              alt: 'Decoration'
+          }}
+        </div>
+      {%- endif -%}
     </div>
 
-    <!-- Content Side (Right) -->
     <div class="feature-row__content">
       {%- if block.settings.badge_text != blank -%}
         {%- liquid
-          assign badge_style = "color: " | append: block.settings.badge_color | append: ";"
+          assign badge_style = 'color: ' | append: block.settings.badge_color | append: ';'
+
           if block.settings.badge_bg_image != blank
             assign badge_bg_url = block.settings.badge_bg_image | image_url: width: 300
             assign badge_style = badge_style | append: " background-image: url('" | append: badge_bg_url | append: "'); background-size: cover; background-position: center;"
           else
-            assign badge_style = badge_style | append: " background-color: #5b21b6;"
+            assign badge_style = badge_style | append: ' background-color: #5b21b6;'
           endif
         -%}
+
         <div class="feature-row__badge" style="{{ badge_style }}">
           <span>{{ block.settings.badge_text }}</span>
         </div>
       {%- endif -%}
 
       {%- if block.settings.heading != blank -%}
-        <h2 class="feature-row__heading" style="color: {{ block.settings.heading_color }};">
+        <h2
+          class="feature-row__heading"
+          style="color: {{ block.settings.heading_color }};"
+        >
           {{ block.settings.heading }}
         </h2>
       {%- endif -%}
 
       {%- if block.settings.description != blank -%}
-        <div class="feature-row__description" style="color: {{ block.settings.text_color }};">
+        <div
+          class="feature-row__description"
+          style="--description-color: {{ block.settings.text_color | default: '#5b21b6' }};"
+        >
           {{ block.settings.description }}
         </div>
       {%- endif -%}
 
       {%- if block.settings.quote_text != blank -%}
-        <div 
-          class="feature-row__quote" 
+        <div
+          class="feature-row__quote"
           style="background: {{ block.settings.quote_bg }}; color: {{ block.settings.quote_color }};"
         >
           <p>“{{ block.settings.quote_text }}”</p>
@@ -63,6 +82,18 @@
       {%- endif -%}
     </div>
   </div>
+
+  {%- if block.settings.middle_icon != blank -%}
+    <div class="feature-row__middle-icon">
+      {{
+        block.settings.middle_icon
+        | image_url: width: 300
+        | image_tag:
+          loading: 'lazy',
+          alt: 'Middle decoration'
+      }}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -78,6 +109,16 @@
       "id": "image",
       "label": "Feature Image"
     },
+  {
+  "type": "image_picker",
+  "id": "floating_icon",
+  "label": "Floating Icon"
+},
+{
+  "type": "image_picker",
+  "id": "middle_icon",
+  "label": "Middle Icon"
+},
     {
       "type": "header",
       "content": "Content Settings"
@@ -103,7 +144,7 @@
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. <strong>Six brain nutrients you won't find in most bars.</strong></p>"
+      "default": "<p>Maria Shriver and her son Patrick started MOSH after Alzheimer's hit their family. Six brain nutrients you won't find in most bars.</p>"
     },
     {
       "type": "textarea",
@@ -133,12 +174,12 @@
       "label": "Heading Color",
       "default": "#5b21b6"
     },
-   {
-  "type": "color",
-  "id": "text_color",
-  "label": "Text Color",
-  "default": "#5B21B6"
-},
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Text Color",
+      "default": "#5b21b6"
+    },
     {
       "type": "color",
       "id": "quote_bg",

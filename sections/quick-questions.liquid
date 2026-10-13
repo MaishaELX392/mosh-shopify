@@ -1,0 +1,139 @@
+{{ 'quick-questions.css' | asset_url | stylesheet_tag }}
+
+<section 
+  id="QuickQuestions-{{ section.id }}" 
+  class="quick-questions"
+  style="
+    --qq-bg: {{ section.settings.section_bg }};
+    --qq-heading-color: {{ section.settings.heading_color }};
+    --qq-question-color: {{ section.settings.question_color }};
+    --qq-answer-color: {{ section.settings.answer_color }};
+    --qq-border-color: {{ section.settings.border_color }};
+  "
+>
+  <div class="quick-questions__container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="quick-questions__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="quick-questions__list">
+      {%- for block in section.blocks -%}
+        <details class="quick-questions__item" {{ block.shopify_attributes }}>
+          <summary class="quick-questions__summary">
+            <span class="quick-questions__title">{{ block.settings.title }}</span>
+            <span class="quick-questions__icon">
+              <img src="{{ 'Icon_Expand.svg' | asset_url }}" alt="Expand" class="icon-expand" width="16" height="16">
+              <img src="{{ 'Icon_Minimize.svg' | asset_url }}" alt="Minimize" class="icon-minimize" width="16" height="16">
+            </span>
+          </summary>
+          <div class="quick-questions__content">
+            {{ block.settings.answer }}
+          </div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Quick Questions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Quick Questions"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_background",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "linear-gradient(0deg, #FDF7FF, #FDF7FF)"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Text Color",
+      "default": "#5b21b6"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question Text Color",
+      "default": "#5b21b6"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Divider Border Color",
+      "default": "#E9D5FF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "What's in a bar?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>12-13g protein, 4g sugar or less, 160-180 calories, and 6+ brain ingredients. The full list is on the product page.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick Questions",
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "title": "What's in a bar?",
+            "answer": "<p>12-13g protein, 4g sugar or less, 160-180 calories, and 6+ brain ingredients. The full list is on the product page.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "title": "Is it gluten free?",
+            "answer": "<p>Yes. Every bar is gluten free, non-GMO, and kosher. The Plant Powered pack is also vegan.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "title": "What if I don't like them?",
+            "answer": "<p>Email us within 30 days and we'll make it right or refund you. That's the whole policy.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "title": "How fast does it ship?",
+            "answer": "<p>Most orders ship within 24 hours and arrive in 1 to 5 business days. Subscribe & Save orders ship free.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
