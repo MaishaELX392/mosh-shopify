@@ -263,6 +263,85 @@
       ],
       "name": "Feature Rows (Stacked)",
       "settings": {}
+    },
+    "quick_questions_RJC7Pg": {
+      "type": "quick-questions",
+      "blocks": {
+        "faq_XVW3EL": {
+          "type": "faq",
+          "settings": {
+            "title": "What's in a bar?",
+            "answer": "<p>12-13g protein, 4g sugar or less, 160-180 calories, and 6+ brain ingredients. The full list is on the product page.</p>"
+          }
+        },
+        "faq_8a6eJU": {
+          "type": "faq",
+          "settings": {
+            "title": "Is it gluten free?",
+            "answer": "<p>Yes. Every bar is gluten free, non-GMO, and kosher. The Plant Powered pack is also vegan.</p>"
+          }
+        },
+        "faq_4bBF6G": {
+          "type": "faq",
+          "settings": {
+            "title": "What if I don't like them?",
+            "answer": "<p>Email us within 30 days and we'll make it right or refund you. That's the whole policy.</p>"
+          }
+        },
+        "faq_QPpmyC": {
+          "type": "faq",
+          "settings": {
+            "title": "How fast does it ship?",
+            "answer": "<p>Most orders ship within 24 hours and arrive in 1 to 5 business days. Subscribe & Save orders ship free.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_XVW3EL",
+        "faq_8a6eJU",
+        "faq_4bBF6G",
+        "faq_QPpmyC"
+      ],
+      "name": "Quick Questions",
+      "settings": {
+        "heading": "Quick Questions",
+        "section_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+        "heading_color": "#5b21b6",
+        "question_color": "#5b21b6",
+        "answer_color": "#000000",
+        "border_color": "#E9D5FF"
+      }
+    },
+    "promo_JMmjwt": {
+      "type": "promo",
+      "blocks": {
+        "hero_cta_H9CLtP": {
+          "type": "hero-cta",
+          "settings": {
+            "button_bg": "linear-gradient(103.96deg, #6022A6 0%, #87189D 100%)",
+            "button_text": "GET THE VARIETY PACK",
+            "button_url": "",
+            "badge_text": "SAVE 20%",
+            "badge_bg": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hero_cta_H9CLtP"
+      ],
+      "name": "Promo",
+      "settings": {
+        "image": "shopify://shop_images/End_Box_Desktop.jpg",
+        "heading": "Swap One Snack. See What Changes",
+        "description": "<p>15 bars. 6 flavors. 4g of sugar or less. Free 6-pack with your first order, and a 30-day guarantee if you don't love them.</p>",
+        "reviews_text": "4.9 stars, 11,000+ reviews",
+        "support_text": "A portion of every purchase supports women's Alzheimer's research",
+        "bg_color": "#ffffff",
+        "heading_color": "#5b21b6",
+        "text_color": "#6022A6",
+        "content_bg_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -270,6 +349,8 @@
     "custom_logo_y8WHty",
     "hero_banner_gnKjeK",
     "customer_reviews_G6ywkp",
-    "feature_rows_YJffLP"
+    "feature_rows_YJffLP",
+    "quick_questions_RJC7Pg",
+    "promo_JMmjwt"
   ]
 }
