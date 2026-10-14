@@ -83,78 +83,6 @@
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
     },
-    "customer_reviews_G6ywkp": {
-      "type": "customer-reviews",
-      "blocks": {
-        "review_9djj9H": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "Great nutrition bar, tasty and reasonable calorie count. Half a bar is enough for a snack!",
-            "author_name": "Gloria"
-          }
-        },
-        "review_HkCjwA": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "I wasn't sure if I'd like the texture or if I'd like the taste but all the ingredients seemed good so I decided to take a chance.",
-            "author_name": "Name"
-          }
-        },
-        "review_WrQNPR": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "Every type of protein or energy bar that is \"health food\" oriented you can find. Nothing has been as satisfying, beneficial or tasty as Mosh.",
-            "author_name": "Name"
-          }
-        },
-        "review_yXft6m": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "Great bar. It is more expensive than other bars but if it a meal substitute I think it is a good choice. Low sugar.",
-            "author_name": "Name"
-          }
-        },
-        "review_NNgpMR": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "Viewed your ad on Facebook. I've always admired Maria and wanted to contribute to the cause. I love the product. It is now my go-to bar every day.",
-            "author_name": "Name"
-          }
-        },
-        "review_kpnNNU": {
-          "type": "review",
-          "settings": {
-            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
-            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
-            "review_text": "I'm a 72 year old who doesn't feel 72 and wants to stay as healthy as I can!",
-            "author_name": "Name"
-          }
-        }
-      },
-      "block_order": [
-        "review_9djj9H",
-        "review_HkCjwA",
-        "review_WrQNPR",
-        "review_yXft6m",
-        "review_NNgpMR",
-        "review_kpnNNU"
-      ],
-      "name": "Customer Reviews Grid",
-      "settings": {
-        "heading": "What Customers Say After The First Box",
-        "section_bg": "linear-gradient(0deg, #FBEAFE, #FBEAFE),\nlinear-gradient(0deg, #FDF7FF, #FDF7FF)"
-      }
-    },
     "feature_rows_YJffLP": {
       "type": "feature-rows",
       "blocks": {
@@ -266,6 +194,42 @@
       "name": "Feature Rows (Stacked)",
       "settings": {}
     },
+    "variety_pack_offer_x7y8jK": {
+      "type": "variety-pack-offer",
+      "blocks": {
+        "hero_cta_y6gJDE": {
+          "type": "hero_cta",
+          "settings": {
+            "button_bg": "linear-gradient(91.2deg, #FFB800 30.88%, #FFD465 67.48%)",
+            "button_text": "GET THE VARIETY PACK",
+            "badge_text": "SAVE 20%",
+            "badge_bg": "linear-gradient(103.96deg, #9C33F6 0%, #B84DFF 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "hero_cta_y6gJDE"
+      ],
+      "name": "Variety Pack Offer",
+      "settings": {
+        "subscription_plans": [
+          "one-time-purchase",
+          "subscribe-save"
+        ],
+        "subheading": "Your New Go-To Snack:",
+        "heading": "15 Bars, 6 Flavors, 20% Off",
+        "description": "<p>A few in your purse, a few in the car, the rest by the coffee maker. First orders also get a free Best Sellers 6-Pack. That's 21 bars for $43.99. About $2 a bar, less than a coffee shop muffin.</p>",
+        "footer_note": "Don't love it? Email us within 30 days and we'll make it right or refund you. No fine print.",
+        "main_image": "shopify://shop_images/Buy_Box_Image_Desktop.png",
+        "section_bg": "#6022A6",
+        "card_bg": "#9A7FB9",
+        "heading_color": "#ffffff",
+        "text_color": "#e2d3fc",
+        "card_border_color": "#ffffff4d",
+        "card_selected_border_color": "#ffffff",
+        "card_selected_bg": "rgba(255, 255, 255, 0.08)"
+      }
+    },
     "quick_questions_RJC7Pg": {
       "type": "quick-questions",
       "blocks": {
@@ -314,6 +278,78 @@
         "border_color": "#e9d5ff"
       }
     },
+    "customer_reviews_G6ywkp": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_9djj9H": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Great nutrition bar, tasty and reasonable calorie count. Half a bar is enough for a snack!",
+            "author_name": "Gloria"
+          }
+        },
+        "review_HkCjwA": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "I wasn't sure if I'd like the texture or if I'd like the taste but all the ingredients seemed good so I decided to take a chance.",
+            "author_name": "Name"
+          }
+        },
+        "review_WrQNPR": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Every type of protein or energy bar that is \"health food\" oriented you can find. Nothing has been as satisfying, beneficial or tasty as Mosh.",
+            "author_name": "Name"
+          }
+        },
+        "review_yXft6m": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Great bar. It is more expensive than other bars but if it a meal substitute I think it is a good choice. Low sugar.",
+            "author_name": "Name"
+          }
+        },
+        "review_NNgpMR": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "Viewed your ad on Facebook. I've always admired Maria and wanted to contribute to the cause. I love the product. It is now my go-to bar every day.",
+            "author_name": "Name"
+          }
+        },
+        "review_kpnNNU": {
+          "type": "review",
+          "settings": {
+            "card_bg": "linear-gradient(0deg, rgba(253, 247, 255, 1), rgba(253, 247, 255, 1) 100%)",
+            "card_bg_image": "shopify://shop_images/Review_Box_Desktop_ef1fc568-d982-47a5-b44b-a71479a72966.png",
+            "review_text": "I'm a 72 year old who doesn't feel 72 and wants to stay as healthy as I can!",
+            "author_name": "Name"
+          }
+        }
+      },
+      "block_order": [
+        "review_9djj9H",
+        "review_HkCjwA",
+        "review_WrQNPR",
+        "review_yXft6m",
+        "review_NNgpMR",
+        "review_kpnNNU"
+      ],
+      "name": "Customer Reviews Grid",
+      "settings": {
+        "heading": "What Customers Say After The First Box",
+        "section_bg": "linear-gradient(0deg, #FBEAFE, #FBEAFE),\nlinear-gradient(0deg, #FDF7FF, #FDF7FF)"
+      }
+    },
     "promo_JMmjwt": {
       "type": "promo",
       "blocks": {
@@ -345,40 +381,16 @@
         "content_bg_color": "#ffffff"
       }
     },
-    "variety_pack_offer_x7y8jK": {
-      "type": "variety-pack-offer",
-      "blocks": {
-        "hero_cta_y6gJDE": {
-          "type": "hero_cta",
-          "settings": {
-            "button_bg": "linear-gradient(91.2deg, #FFB800 30.88%, #FFD465 67.48%)",
-            "button_text": "GET THE VARIETY PACK",
-            "badge_text": "SAVE 20%",
-            "badge_bg": "linear-gradient(103.96deg, #9C33F6 0%, #B84DFF 100%)"
-          }
-        }
-      },
-      "block_order": [
-        "hero_cta_y6gJDE"
-      ],
-      "name": "Variety Pack Offer",
+    "text_banner_3mbVCj": {
+      "type": "text-banner",
+      "name": "Text Banner",
       "settings": {
-        "subscription_plans": [
-          "one-time-purchase",
-          "subscribe-save"
-        ],
-        "subheading": "Your New Go-To Snack:",
-        "heading": "15 Bars, 6 Flavors, 20% Off",
-        "description": "<p>A few in your purse, a few in the car, the rest by the coffee maker. First orders also get a free Best Sellers 6-Pack. That's 21 bars for $43.99. About $2 a bar, less than a coffee shop muffin.</p>",
-        "footer_note": "Don't love it? Email us within 30 days and we'll make it right or refund you. No fine print.",
-        "main_image": "shopify://shop_images/Buy_Box_Image_Desktop.png",
-        "section_bg": "#6022A6",
-        "card_bg": "#9A7FB9",
-        "heading_color": "#ffffff",
-        "text_color": "#e2d3fc",
-        "card_border_color": "#ffffff4d",
-        "card_selected_border_color": "#ffffff",
-        "card_selected_bg": "rgba(255, 255, 255, 0.08)"
+        "heading": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>",
+        "heading_size": 24,
+        "bg_color": "#FAF5FF",
+        "text_color": "#6022A6",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
@@ -386,6 +398,7 @@
     "main",
     "custom_logo_y8WHty",
     "hero_banner_gnKjeK",
+    "text_banner_3mbVCj",
     "feature_rows_YJffLP",
     "variety_pack_offer_x7y8jK",
     "quick_questions_RJC7Pg",
