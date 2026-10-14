@@ -78,7 +78,7 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "background_image": "shopify://shop_images/Hero_Desktop.jpg",
+        "background_image": "shopify://shop_images/Hero_Mobile.jpg",
         "title": "5 Reasons Why Thousands Are Swapping Their Afternoon Snack for a Bar Made for the Brain",
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
@@ -90,7 +90,7 @@
         "heading": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>",
         "heading_size": 24,
         "bg_color": "#FAF5FF",
-        "text_color": "#6022A6",
+        "text_color": "#6022a6",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -401,7 +401,7 @@
         "logo_width": 130,
         "copyright_text": "MOSH. All rights reserved.",
         "bg_color": "#6022A6",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "padding_top": 48,
         "padding_bottom": 48
       }
