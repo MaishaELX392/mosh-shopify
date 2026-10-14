@@ -10,6 +10,7 @@
   padding-top: var(--tb-padding-top, 40px);
   padding-bottom: var(--tb-padding-bottom, 40px);
   box-sizing: border-box;
+  border-bottom: 2px solid #6022A61F;
 }
 
 .text-banner__wrapper {
