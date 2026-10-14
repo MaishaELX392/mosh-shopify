@@ -8,13 +8,12 @@
   justify-content: space-between;
   background: linear-gradient(103.96deg, #6022A6 0%, #87189D 100%);
   color: #ffffff;
-  padding: 12px 14px 12px 24px;
+  padding: 13px 24px ;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  gap: 16px;
+  font-size: 18px;
+  gap: 106px;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 

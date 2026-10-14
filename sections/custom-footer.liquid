@@ -1,0 +1,126 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<footer
+  id="CustomFooter-{{ section.id }}"
+  class="custom-footer"
+  style="
+    --cf-bg: {{ section.settings.bg_color }};
+    --cf-text-color: {{ section.settings.text_color }};
+    --cf-padding-top: {{ section.settings.padding_top }}px;
+    --cf-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="custom-footer__wrapper">
+    <div class="custom-footer__content">
+      
+      {%- comment -%} Logo {%- endcomment -%}
+      {% if section.settings.logo != blank %}
+        <div class="custom-footer__logo-wrap">
+          <img
+            src="{{ section.settings.logo | image_url: width: 400 }}"
+            alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            loading="lazy"
+            width="{{ section.settings.logo_width }}"
+            height="auto"
+            class="custom-footer__logo"
+            style="max-width: {{ section.settings.logo_width }}px;"
+          >
+        </div>
+      {% endif %}
+
+      {%- comment -%} Copyright Text {%- endcomment -%}
+      {% if section.settings.copyright_text != blank %}
+        <div class="custom-footer__copyright">
+          <p>
+            &copy; {{ 'now' | date: '%Y' }} {{ section.settings.copyright_text | escape }}
+          </p>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "tag": "section",
+  "class": "section-custom-footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Logo Width",
+      "default": 130
+    },
+    {
+      "type": "header",
+      "content": "Copyright Settings"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "MOSH. All rights reserved."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#6022A6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer"
+    }
+  ]
+}
+{% endschema %}

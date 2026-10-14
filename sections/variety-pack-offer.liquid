@@ -17,7 +17,6 @@
   <div class="variety-offer__wrapper">
     <div class="variety-offer__container">
 
-      {%- comment -%} Media Column (Left) - Single Main Image {%- endcomment -%}
       <div class="variety-offer__media-col">
         <div class="variety-offer__media-card">
           {% if section.settings.main_image != blank %}
@@ -39,7 +38,6 @@
         </div>
       </div>
 
-      {%- comment -%} Content Column (Right) {%- endcomment -%}
       <div class="variety-offer__content-col">
 
         {% if section.settings.subheading != blank %}
@@ -176,7 +174,6 @@
 
             </div>
 
-            {%- comment -%} Render Blocks (hero_cta block) {%- endcomment -%}
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'hero_cta' %}
