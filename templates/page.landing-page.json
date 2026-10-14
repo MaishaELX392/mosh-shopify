@@ -83,6 +83,18 @@
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
     },
+    "text_banner_3mbVCj": {
+      "type": "text-banner",
+      "name": "Text Banner",
+      "settings": {
+        "heading": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>",
+        "heading_size": 24,
+        "bg_color": "#FAF5FF",
+        "text_color": "#6022A6",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "feature_rows_YJffLP": {
       "type": "feature-rows",
       "blocks": {
@@ -381,16 +393,17 @@
         "content_bg_color": "#ffffff"
       }
     },
-    "text_banner_3mbVCj": {
-      "type": "text-banner",
-      "name": "Text Banner",
+    "custom_footer_D6MQp8": {
+      "type": "custom-footer",
+      "name": "Custom Footer",
       "settings": {
-        "heading": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>",
-        "heading_size": 24,
-        "bg_color": "#FAF5FF",
-        "text_color": "#6022A6",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "logo": "shopify://shop_images/footer_logo.png",
+        "logo_width": 130,
+        "copyright_text": "MOSH. All rights reserved.",
+        "bg_color": "#6022A6",
+        "text_color": "#FFFFFF",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     }
   },
@@ -403,6 +416,7 @@
     "variety_pack_offer_x7y8jK",
     "quick_questions_RJC7Pg",
     "customer_reviews_G6ywkp",
-    "promo_JMmjwt"
+    "promo_JMmjwt",
+    "custom_footer_D6MQp8"
   ]
 }
