@@ -163,6 +163,7 @@
           "name": "Left Image Block",
           "settings": {
             "image": "shopify://shop_images/Listicle_Img_01.png",
+            "floating_icon": "shopify://shop_images/Piece_Lemon_6b7620bc-79be-42e2-8696-11680ab923f5.png",
             "badge_text": "01",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
@@ -201,6 +202,7 @@
           "name": "Left Image Block",
           "settings": {
             "image": "shopify://shop_images/Listicle_Img_03.png",
+            "middle_icon": "shopify://shop_images/Piece_ChocolateChip_b1a680a6-0203-46ed-8134-007452041d46.png",
             "badge_text": "03",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
@@ -372,10 +374,10 @@
         "main_image": "shopify://shop_images/Buy_Box_Image_Desktop.png",
         "section_bg": "#6022A6",
         "card_bg": "#9A7FB9",
-        "heading_color": "#FFFFFF",
-        "text_color": "#E2D3FC",
-        "card_border_color": "rgba(255, 255, 255, 0.3)",
-        "card_selected_border_color": "#FFFFFF",
+        "heading_color": "#ffffff",
+        "text_color": "#e2d3fc",
+        "card_border_color": "#ffffff4d",
+        "card_selected_border_color": "#ffffff",
         "card_selected_bg": "rgba(255, 255, 255, 0.08)"
       }
     }
