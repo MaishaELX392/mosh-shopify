@@ -79,6 +79,7 @@
       "name": "Hero Banner",
       "settings": {
         "background_image": "shopify://shop_images/Hero_Desktop.jpg",
+        "mobile_background_image": "shopify://shop_images/Hero_Mobile_e365b74d-957d-4e6f-930b-d8d2f6dbad6d.jpg",
         "title": "5 Reasons Why Thousands Are Swapping Their Afternoon Snack for a Bar Made for the Brain",
         "subtitle": "You want something sweet with your coffee. You don't want the sugar or the crash. What if your snack was the smartest thing you ate all day?"
       }
