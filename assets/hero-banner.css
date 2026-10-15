@@ -27,7 +27,7 @@
 .hero-banner__title {
   font-size: 52px;
   font-weight: 700;
-  color:#6022A6; 
+  color: #6022A6; 
   margin: 0 0 16px 0;
   max-width: 685px; 
   letter-spacing: -1px;
@@ -43,10 +43,10 @@
 }
 
 .hero-banner__subtitle {
-  font-size: 20px;
-font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
   color: #6022A6;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-banner__blocks {
@@ -57,11 +57,30 @@ font-weight: 600;
 
 @media (max-width: 768px) {
   .hero-banner {
+    background-size: contain;
     background-position: center top;
-    padding: 40px 16px;
+    height: auto;
+    width: 100vw;
+    padding: 32px 16px;
+  }
+  
+  .hero-banner__content {
+    max-width: 350px;
   }
 
   .hero-banner__title {
-    font-size: 28px;
+    font-size: 40px;
+    display: block;         
+    flex-direction: unset;
+  }
+
+  .hero-banner__title span {
+    display: inline;         
+  }
+
+  .hero-banner__blocks {
+    align-items: center;
+    text-align: center;
   }
 }
+

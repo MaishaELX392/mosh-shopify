@@ -1,7 +1,8 @@
 .hero-usp {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 12px;
   width: 100%;
 }
 
@@ -12,14 +13,15 @@
   position: relative;
   color: #6b21a8;
   font-size: 13px;
-  line-height: 1.35;
+  flex: 1; 
+  min-width: 0; /* Crucial: Prevents flex children from overflowing bounds */
 }
 
 /* Vertical Dividers */
 .hero-usp__item:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -12px;
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   height: 28px;
@@ -39,14 +41,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 1px;
   margin-bottom: 4px;
 }
 
 .hero-usp__rating-image {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -59,16 +61,19 @@
 }
 
 .hero-usp__text {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word; /* Prevents long words like Schwarzenegger from breaking layout */
 }
 
 .hero-usp__line-1,
 .hero-usp__line-2 {
-  display: flex;
+  display: block;
+  width: 100%;
 }
 
 /* Font styles */
@@ -82,20 +87,28 @@
   color: #6b21a8;
 }
 
-/* Mobile responsive layout */
 @media (max-width: 640px) {
   .hero-usp {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: row; 
+    justify-content: space-between;
+    gap: 8px; 
   }
 
   .hero-usp__item {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
+    font-size: 13px; 
+
   }
 
   .hero-usp__item:not(:last-child)::after {
-    display: none;
+    display: block; 
+    right: -4px;
+    height: 24px;
+  }
+
+  .hero-usp__rating-image {
+    width: 15px;
+    height: 14px;
   }
 }

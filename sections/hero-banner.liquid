@@ -1,6 +1,6 @@
 {{ 'hero-banner.css' | asset_url | stylesheet_tag }}
 
-<section class="hero-banner full-width" style="background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}');">
+<section class="hero-banner full-width">
   <div class="hero-banner__container">
     <div class="hero-banner__content">
       
@@ -25,6 +25,28 @@
   </div>
 </section>
 
+{% style %}
+  /* Desktop Background Image */
+  {% if section.settings.background_image != blank %}
+    .hero-banner {
+      background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}');
+    }
+  {% endif %}
+
+  /* Mobile Background Image & Aspect Ratio Sizing */
+  @media (max-width: 768px) {
+    .hero-banner {
+      {% assign mobile_img = section.settings.mobile_background_image | default: section.settings.background_image %}
+      
+      {% if mobile_img != blank %}
+        background-image: url('{{ mobile_img | image_url: width: 1000 }}');
+        /* Sets the aspect ratio dynamically based on the uploaded mobile image */
+        aspect-ratio: {{ mobile_img.aspect_ratio }};
+      {% endif %}
+    }
+  }
+{% endstyle %}
+
 {% schema %}
 {
   "name": "Hero Banner",
@@ -32,7 +54,12 @@
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background Image"
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile Background Image"
     },
     {
       "type": "text",

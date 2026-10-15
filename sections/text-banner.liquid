@@ -3,13 +3,7 @@
 <section
   id="TextBanner-{{ section.id }}"
   class="text-banner"
-  style="
-    --tb-bg: {{ section.settings.bg_color }};
-    --tb-text-color: {{ section.settings.text_color }};
-    --tb-padding-top: {{ section.settings.padding_top }}px;
-    --tb-padding-bottom: {{ section.settings.padding_bottom }}px;
-    --tb-font-size: {{ section.settings.heading_size }}px;
-  "
+  style="--tb-bg: {{ section.settings.bg_color }};"
 >
   <div class="text-banner__wrapper">
     {% if section.settings.heading != blank %}
@@ -33,54 +27,10 @@
       "default": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>"
     },
     {
-      "type": "range",
-      "id": "heading_size",
-      "min": 16,
-      "max": 48,
-      "step": 1,
-      "unit": "px",
-      "label": "Text Size",
-      "default": 24
-    },
-    {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
       "type": "color_background",
       "id": "bg_color",
       "label": "Background Color",
       "default": "#FAF5FF"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text Color",
-      "default": "#6022A6"
-    },
-    {
-      "type": "header",
-      "content": "Section Padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 10,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Top Padding",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 10,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Bottom Padding",
-      "default": 40
     }
   ],
   "presets": [

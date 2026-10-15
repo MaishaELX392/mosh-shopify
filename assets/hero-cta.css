@@ -6,15 +6,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(103.96deg, #6022A6 0%, #87189D 100%);
+  background: linear-gradient(103.96deg, #6022a6 0%, #87189d 100%);
   color: #ffffff;
-  padding: 13px 24px ;
+  padding: 13px 24px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   gap: 106px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  @media (max-width: 768px) {
+    padding: 15px 20px;
+    font-size: 16px;
+    gap: 40px;
+  }
 }
 
 .hero-banner__btn:hover {
@@ -34,4 +41,8 @@
   font-size: 13px;
   font-weight: 800;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    @media (max-width: 768px) {
+        padding:  4px;
+        font-weight: 600;
+    }
 }
