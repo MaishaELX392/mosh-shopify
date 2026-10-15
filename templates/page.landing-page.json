@@ -88,11 +88,7 @@
       "name": "Text Banner",
       "settings": {
         "heading": "<p>Here's why so many people say MOSH is the first bar they've stuck with:</p>",
-        "heading_size": 24,
-        "bg_color": "#FAF5FF",
-        "text_color": "#6022a6",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "bg_color": "#FAF5FF"
       }
     },
     "feature_rows_YJffLP": {
@@ -102,7 +98,8 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "image": "shopify://shop_images/Listicle_Img_01.png",
+            "image_desktop": "shopify://shop_images/Listicle_Img_01.png",
+            "image_mobile": "shopify://shop_images/Testimonial_Mob_Img_01.png",
             "floating_icon": "shopify://shop_images/Piece_Lemon_6b7620bc-79be-42e2-8696-11680ab923f5.png",
             "badge_text": "01",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
@@ -122,7 +119,6 @@
           "type": "right-image-block",
           "name": "Right Image Block",
           "settings": {
-            "image": "shopify://shop_images/Listicle_Img_02.png",
             "badge_text": "02",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
@@ -141,7 +137,6 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "image": "shopify://shop_images/Listicle_Img_03.png",
             "middle_icon": "shopify://shop_images/Piece_ChocolateChip_b1a680a6-0203-46ed-8134-007452041d46.png",
             "badge_text": "03",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
@@ -161,7 +156,6 @@
           "type": "right-image-block",
           "name": "Right Image Block",
           "settings": {
-            "image": "shopify://shop_images/Listicle_Img_04.png",
             "badge_text": "04",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
@@ -180,7 +174,6 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
-            "image": "shopify://shop_images/Listicle_Img_05.png",
             "badge_text": "05",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
