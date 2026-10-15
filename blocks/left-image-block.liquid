@@ -1,5 +1,9 @@
- 
 {{ 'feature-rows.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign desktop_image = block.settings.image_desktop
+  assign mobile_image = block.settings.image_mobile | default: desktop_image
+-%}
 
 <div
   class="feature-row feature-row--left-image"
@@ -8,15 +12,23 @@
 >
   <div class="feature-row__wrapper">
     <div class="feature-row__media">
-      {%- if block.settings.image != blank -%}
-        {{
-          block.settings.image
-          | image_url: width: 1400
-          | image_tag:
-            class: 'feature-row__image',
-            loading: 'lazy',
-            alt: block.settings.image.alt
-        }}
+      {%- if desktop_image != blank -%}
+        <picture class="feature-row__picture">
+          {%- if block.settings.image_mobile != blank -%}
+            <source
+              media="(max-width: 991px)"
+              srcset="{{ mobile_image | image_url: width: 800 }}"
+            >
+          {%- endif -%}
+          {{
+            desktop_image
+            | image_url: width: 1400
+            | image_tag:
+              class: 'feature-row__image',
+              loading: 'lazy',
+              alt: desktop_image.alt
+          }}
+        </picture>
       {%- else -%}
         <div class="feature-row__placeholder">
           {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -106,19 +118,24 @@
     },
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Feature Image"
+      "id": "image_desktop",
+      "label": "Desktop Feature Image"
     },
-  {
-  "type": "image_picker",
-  "id": "floating_icon",
-  "label": "Floating Icon"
-},
-{
-  "type": "image_picker",
-  "id": "middle_icon",
-  "label": "Middle Icon"
-},
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Feature Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "floating_icon",
+      "label": "Floating Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "middle_icon",
+      "label": "Middle Icon"
+    },
     {
       "type": "header",
       "content": "Content Settings"
