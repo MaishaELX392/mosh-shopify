@@ -214,10 +214,10 @@
         "hero_cta_y6gJDE": {
           "type": "hero_cta",
           "settings": {
-            "button_bg": "linear-gradient(91.2deg, #FFB800 30.88%, #FFD465 67.48%)",
+            "button_bg": "linear-gradient(91.2deg, rgba(255, 184, 0, 1) 30.88%, rgba(255, 212, 101, 1) 67.48%)",
             "button_text": "GET THE VARIETY PACK",
             "badge_text": "SAVE 20%",
-            "badge_bg": "linear-gradient(103.96deg, #9C33F6 0%, #B84DFF 100%)"
+            "badge_bg": "linear-gradient(103.96deg, rgba(156, 51, 246, 1), rgba(184, 77, 255, 1) 100%)"
           }
         }
       },
