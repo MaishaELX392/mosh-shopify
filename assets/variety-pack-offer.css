@@ -187,19 +187,6 @@
   margin-top: 8px;
 }
 
-.variety-offer__form .hero-banner__btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: none;
-  border-radius: 40px;
-  padding: 16px 28px;
-  cursor: pointer;
-  text-decoration: none;
-  box-sizing: border-box;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
 
 .variety-offer__form .hero-banner__btn:hover {
   transform: translateY(-2px);

@@ -1,4 +1,6 @@
 {{ 'variety-pack-offer.css' | asset_url | stylesheet_tag }}
+{{ 'hero-cta.css' | asset_url | stylesheet_tag }}
+
 <script src="{{ 'variety-pack-offer.js' | asset_url }}" defer></script>
 
 <section
@@ -177,27 +179,23 @@
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'hero_cta' %}
-                  {{ 'hero-cta.css' | asset_url | stylesheet_tag }}
-
                   <div class="hero-banner__cta-wrapper" {{ block.shopify_attributes }}>
                     {% if block.settings.button_text != blank %}
                       {%- liquid
-                        assign btn_bg_style = ''
-                        if block.settings.button_bg != blank
-                          assign btn_bg_style = "background: " | append: block.settings.button_bg | append: ";"
-                        endif
-
-                        assign badge_bg_style = ''
-                        if block.settings.badge_bg != blank
-                          assign badge_bg_style = "background: " | append: block.settings.badge_bg | append: ";"
-                        endif
+                        assign btn_bg = block.settings.button_bg | default: 'linear-gradient(103.96deg, rgba(96, 34, 166, 1), rgba(135, 24, 157, 1) 100%)'
+                        assign badge_bg = block.settings.badge_bg | default: '#ffffff'
                       -%}
-                      <button type="submit" class="hero-banner__btn" style="{{ btn_bg_style }}">
+                      <a 
+                        href="#" 
+                        class="hero-banner__btn" 
+                        style="background: {{ btn_bg }};"
+                        onclick="document.getElementById('{{ variety_form_id }}').submit(); return false;"
+                      >
                         <span class="hero-banner__btn-text">{{ block.settings.button_text }}</span>
                         {% if block.settings.badge_text != blank %}
-                          <span class="hero-banner__btn-badge" style="{{ badge_bg_style }}">{{ block.settings.badge_text }}</span>
+                          <span class="hero-banner__btn-badge" style="background: {{ badge_bg }};">{{ block.settings.badge_text }}</span>
                         {% endif %}
-                      </button>
+                      </a>
                     {% endif %}
                   </div>
               {% endcase %}

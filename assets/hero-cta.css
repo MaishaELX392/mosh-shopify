@@ -1,48 +1,83 @@
-.hero-banner__cta-wrapper {
+.cta-wrapper,
+.hero-banner__cta-wrapper,
+.promo__cta-wrapper {
   margin-bottom: 8px;
+  width: 100%;
 }
 
-.hero-banner__btn {
+.cta-button,
+.hero-banner__btn,
+.promo__cta-wrapper a,
+.promo__cta-wrapper button,
+.promo__cta-wrapper .button {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(103.96deg, #6022a6 0%, #87189d 100%);
+  background-color: #7212A8;
   color: #ffffff;
-  padding: 13px 24px;
-  border-radius: 40px;
+  padding: 10px 12px 10px 28px;
+  border-radius: 9999px;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  gap: 106px;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-  @media (max-width: 768px) {
-    padding: 15px 20px;
-    font-size: 16px;
-    gap: 40px;
-  }
+  font-weight: 900;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  gap: 24px;
+  border: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.hero-banner__btn:hover {
-  opacity: 0.92;
+.cta-button:hover,
+.hero-banner__btn:hover,
+.promo__cta-wrapper a:hover,
+.promo__cta-wrapper button:hover,
+.promo__cta-wrapper .button:hover {
+  background-color: #610E91;
   transform: translateY(-1px);
 }
 
-.hero-banner__btn-text {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+.cta-button__text,
+.hero-banner__btn-text,
+.promo__cta-wrapper .button-text {
+  text-shadow: none;
+  white-space: nowrap;
+  background: none;
+  background-color: transparent;
 }
 
-.hero-banner__btn-badge {
-  background: #ffffff;
-  color: #5b21b6;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 800;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    @media (max-width: 768px) {
-        padding:  4px;
-        font-weight: 600;
-    }
+.cta-button__badge,
+.hero-banner__btn-badge,
+.promo__cta-wrapper span:not(.hero-banner__btn-text):not(.button-text) {
+  background-color: #FDF4FF;
+  color: #610E91;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  box-shadow: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cta-button,
+  .hero-banner__btn,
+  .promo__cta-wrapper a,
+  .promo__cta-wrapper button,
+  .promo__cta-wrapper .button {
+    padding: 8px 8px 8px 20px;
+    font-size: 15px;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .cta-button__badge,
+  .hero-banner__btn-badge,
+  .promo__cta-wrapper span:not(.hero-banner__btn-text):not(.button-text) {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 800;
+  }
 }

@@ -1,34 +1,57 @@
 {{ 'promo.css' | asset_url | stylesheet_tag }}
+{{ 'hero-cta.css' | asset_url | stylesheet_tag }}
 
-<section 
-  id="Promo-{{ section.id }}" 
+
+{%- liquid
+  assign desktop_image = section.settings.image_desktop
+  assign mobile_image = section.settings.image_mobile | default: desktop_image
+-%}
+
+<section
+  id="Promo-{{ section.id }}"
   class="promo"
   style="
-    --promo-section-bg: {{ section.settings.bg_color }};
-    --promo-heading-color: {{ section.settings.heading_color }};
-    --promo-text-color: {{ section.settings.text_color }};
-    --promo-content-bg: {{ section.settings.content_bg_color | color_modify: 'alpha', 0.85 }};
+    {% if desktop_image != blank %}
+      --desktop-aspect: {{ desktop_image.aspect_ratio }};
+    {% endif %}
+    {% if mobile_image != blank %}
+      --mobile-aspect: {{ mobile_image.aspect_ratio }};
+    {% endif %}
   "
 >
   <!-- Background Image Container -->
   <div class="promo__media-background">
-    {%- if section.settings.image != blank -%}
-      <img
-        src="{{ section.settings.image | image_url: width: 2200 }}"
-        alt="{{ section.settings.image.alt | escape }}"
-        class="promo__image"
-        loading="lazy"
-        width="auto"
-        height="auto"
-      >
+    {%- if desktop_image != blank -%}
+      <picture class="promo__picture">
+        {%- if section.settings.image_mobile != blank -%}
+          <source
+            media="(max-width: 991px)"
+            srcset="{{ mobile_image | image_url: width: 1000 }}"
+          >
+        {%- endif -%}
+        {{
+          desktop_image
+          | image_url: width: 2000
+          | image_tag:
+            class: 'promo__image',
+            loading: 'lazy',
+            alt: desktop_image.alt
+        }}
+      </picture>
+    {%- else -%}
+      <div class="promo__placeholder">
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
     {%- endif -%}
   </div>
 
+  <!-- Content Container Over Background -->
   <div class="promo__container">
-    <!-- Content Side -->
     <div class="promo__content">
       {%- if section.settings.heading != blank -%}
-        <h2 class="promo__heading">{{ section.settings.heading }}</h2>
+        <h2 class="promo__heading">
+          {{ section.settings.heading }}
+        </h2>
       {%- endif -%}
 
       {%- if section.settings.description != blank -%}
@@ -37,24 +60,31 @@
         </div>
       {%- endif -%}
 
-      <!-- CTA Button Block -->
       <div class="promo__cta-wrapper">
         {% content_for 'blocks' %}
       </div>
 
-      <!-- Reviews & Support Footer -->
+      <!-- Footer (Stars & Support) -->
       <div class="promo__footer">
         <div class="promo__reviews">
           <div class="promo__stars">
-            {%- for i in (1..5) -%}
-              <img src="{{ 'Star_Rating.svg' | asset_url }}" alt="Star" width="20" height="20">
-            {%- endfor -%}
+            {% for i in (1..5) %}
+              <svg class="promo__star-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            {% endfor %}
           </div>
-          <span class="promo__reviews-text">{{ section.settings.reviews_text }}</span>
+          <span class="promo__reviews-text">
+            <strong>4.9 stars,</strong> 11,000+ reviews
+          </span>
         </div>
+
         <div class="promo__divider"></div>
+
         <div class="promo__support">
-          <p class="promo__support-text">{{ section.settings.support_text }}</p>
+          <p class="promo__support-text">
+            A portion of every purchase supports women's Alzheimer's research
+          </p>
         </div>
       </div>
     </div>
@@ -63,17 +93,23 @@
 
 {% schema %}
 {
-  "name": "Promo",
+  "name": "Promo Banner",
+  "tag": "section",
+  "class": "section-promo",
   "settings": [
     {
       "type": "header",
-      "content": "Media Settings"
+      "content": "Image Settings"
     },
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Section Background Image",
-      "info": "Upload a full-section feature image. If left blank, a solid background color will display."
+      "id": "image_desktop",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Background Image"
     },
     {
       "type": "header",
@@ -90,62 +126,19 @@
       "id": "description",
       "label": "Description",
       "default": "<p>15 bars. 6 flavors. 4g of sugar or less. Free 6-pack with your first order, and a 30-day guarantee if you don't love them.</p>"
-    },
-    {
-      "type": "text",
-      "id": "reviews_text",
-      "label": "Reviews Subtext",
-      "default": "4.9 stars, 11,000+ reviews"
-    },
-    {
-      "type": "textarea",
-      "id": "support_text",
-      "label": "Support Subtext",
-      "default": "A portion of every purchase supports women's Alzheimer's research"
-    },
-    {
-      "type": "header",
-      "content": "Styling & Colors"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Section Background Color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading Color",
-      "default": "#5b21b6"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text & Subtext Color",
-      "default": "#6022A6"
-    },
-    {
-      "type": "color",
-      "id": "content_bg_color",
-      "label": "Content Box Background (Mobile)",
-      "default": "#ffffff",
-      "info": "Applies on mobile screens when an image is present."
     }
   ],
   "blocks": [
     {
       "type": "@theme"
+    },
+    {
+      "type": "@app"
     }
   ],
   "presets": [
     {
-      "name": "Promo",
-      "blocks": [
-        {
-          "type": "hero-cta"
-        }
-      ]
+      "name": "Promo Banner"
     }
   ]
 }
