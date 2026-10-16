@@ -140,6 +140,8 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
+            "image_desktop": "shopify://shop_images/Listicle_Img_03.png",
+            "image_mobile": "shopify://shop_images/Testimonial_Mob_Img_03.png",
             "middle_icon": "shopify://shop_images/Piece_ChocolateChip_b1a680a6-0203-46ed-8134-007452041d46.png",
             "badge_text": "03",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
