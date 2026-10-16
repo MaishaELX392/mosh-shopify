@@ -384,15 +384,10 @@
       ],
       "name": "Promo",
       "settings": {
-        "image": "shopify://shop_images/End_Box_Desktop.jpg",
+        "image_desktop": "shopify://shop_images/End_Box_Desktop.jpg",
+        "image_mobile": "shopify://shop_images/End_Box_Mobile.jpg",
         "heading": "Swap One Snack. See What Changes",
-        "description": "<p>15 bars. 6 flavors. 4g of sugar or less. Free 6-pack with your first order, and a 30-day guarantee if you don't love them.</p>",
-        "reviews_text": "4.9 stars, 11,000+ reviews",
-        "support_text": "A portion of every purchase supports women's Alzheimer's research",
-        "bg_color": "#ffffff",
-        "heading_color": "#5b21b6",
-        "text_color": "#6022a6",
-        "content_bg_color": "#ffffff"
+        "description": "<p>15 bars. 6 flavors. 4g of sugar or less. Free 6-pack with your first order, and a 30-day guarantee if you don't love them.</p>"
       }
     },
     "custom_footer_D6MQp8": {
