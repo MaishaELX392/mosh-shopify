@@ -161,6 +161,8 @@
           "type": "right-image-block",
           "name": "Right Image Block",
           "settings": {
+            "image_desktop": "shopify://shop_images/Listicle_Img_04.png",
+            "image_mobile": "shopify://shop_images/Testimonial_Mob_Img_04.png",
             "badge_text": "04",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "12-13g of Protein, So One Bar Holds You Until Dinner",
@@ -179,6 +181,8 @@
           "type": "left-image-block",
           "name": "Left Image Block",
           "settings": {
+            "image_desktop": "shopify://shop_images/Listicle_Img_05.png",
+            "image_mobile": "shopify://shop_images/Testimonial_Mob_Img_05.png",
             "badge_text": "05",
             "badge_bg_image": "shopify://shop_images/Number_Circle.svg",
             "heading": "Made for Your Brain, by People With a Mission",
