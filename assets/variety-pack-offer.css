@@ -49,7 +49,6 @@
   object-fit: contain;
 }
 
-/* --- Right Content Column --- */
 .variety-offer__content-col {
   flex: 0 0 52%;
   max-width: 52%;
@@ -181,7 +180,6 @@
   color: #ffffff;
 }
 
-/* --- Full-Width CTA Button Block Overrides --- */
 .variety-offer__form .hero-banner__cta-wrapper {
   width: 100%;
   margin-top: 8px;
@@ -201,10 +199,17 @@
   color: var(--vo-text-color, #E2D3FC);
 }
 
-/* --- Responsive Overrides --- */
-@media (max-width: 991px) {
+/* ==========================================
+   MOBILE-ONLY OVERRIDES (@media max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  .variety-offer {
+    padding: 40px 16px;
+  }
+
   .variety-offer__container {
     flex-direction: column;
+    gap: 32px;
   }
 
   .variety-offer__media-col,
@@ -214,13 +219,126 @@
     width: 100%;
   }
 
-  .variety-offer__heading {
-    font-size: 32px;
-  }
-
   .variety-offer__media-card {
     min-height: auto;
     padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .variety-offer__subheading {
+    font-size: 18px;
+  }
+
+  .variety-offer__heading {
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .variety-offer__description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  /* Option Cards for Mobile */
+  .variety-offer__options {
+    gap: 16px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+
+  .variety-offer__option-card {
+    position: relative; /* Required for floating badge */
+    padding: 18px 16px 14px 16px;
+    border-radius: 12px;
+  }
+
+  .variety-offer__option-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .variety-offer__radio-wrap {
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .variety-offer__radio {
+    margin-top: 2px;
+  }
+
+  .variety-offer__option-title {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  /* Price Stack Layout on Mobile */
+  .variety-offer__price-wrap {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+  }
+
+  .variety-offer__price {
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .variety-offer__compare-price {
+    font-size: 12px;
+  }
+
+  /* Floating Savings Badge on Top Edge of Card */
+  .variety-offer__savings-badge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: #ffffff;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+
+  .variety-offer__features {
+    margin: 10px 0 0 26px;
+    gap: 4px;
+  }
+
+  .variety-offer__features li {
+    font-size: 12px;
+  }
+
+  /* CTA Button Fix for Mobile */
+  .hero-banner__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #111111;
+    font-weight: 900;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .hero-banner__btn-badge {
+    background: #ffffff;
+    color: #111111;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 16px;
+  }
+
+  .variety-offer__footer-note {
+    font-size: 11px;
+    margin-top: 14px;
+    padding: 0 10px;
   }
 }
- 

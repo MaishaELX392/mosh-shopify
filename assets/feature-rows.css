@@ -140,7 +140,7 @@
 
 .feature-row__description p,
 .feature-row__description span {
-  color: var(--description-color, #5b21b6) !important;
+  color: var(--description-color, #5b21b6) ;
 }
 
 .feature-row__description p {
@@ -179,7 +179,7 @@
   .feature-row__wrapper,
   .feature-row--left-image .feature-row__wrapper,
   .feature-row--right-image .feature-row__wrapper {
-    flex-direction: column !important;
+    flex-direction: column ;
   }
 
   .feature-row__media,
@@ -211,8 +211,8 @@
 
   .feature-row__middle-icon {
     width: 100px;
-    bottom: -35px;
-      left: 95%;
+    bottom: -420px;
+      left: 93%;
 
   }
 
